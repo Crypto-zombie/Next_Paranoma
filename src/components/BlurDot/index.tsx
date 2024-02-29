@@ -19,7 +19,7 @@ const BlurDot = ({ pos, index }: Props) => {
   return (
     <mesh
       ref={ref}
-      position={pos}
+      position={[pos.x, pos.y, pos.z]}
       onPointerDown={(e) => {
         e.stopPropagation()
         if (action === 'remove') {

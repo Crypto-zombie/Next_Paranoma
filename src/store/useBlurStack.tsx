@@ -4,7 +4,7 @@ import { create } from 'zustand'
 
 export type initialState = {
   blurStack: Array<Vector3>
-  setBlurStack: (cartValue: any) => void
+  setBlurStack: (blurStack: any) => void
 }
 
 export const useCart = create<initialState>((set) => ({

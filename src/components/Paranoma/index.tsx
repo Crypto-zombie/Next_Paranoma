@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react'
-import { DoubleSide, TextureLoader } from 'three/src/Three.js'
+import { BackSide } from 'three/src/Three.js'
+import { useTexture } from '@react-three/drei'
 
 export default function Paranoma() {
-  const texture = useMemo(() => new TextureLoader().load('/paranoma.webp'), [])
+  const texture = useTexture('/paranoma.webp')
 
   return (
     <group>
@@ -10,7 +10,8 @@ export default function Paranoma() {
         <sphereGeometry args={[150, 100, 100]} />
         <meshBasicMaterial
           map={texture}
-          side={DoubleSide}
+          side={BackSide}
+          toneMapped={false}
         />
       </mesh>
     </group>

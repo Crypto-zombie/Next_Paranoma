@@ -19,7 +19,7 @@ const TextEditor = ({ pos, index }: CustomText) => {
     <Html
       sprite
       position={pos}
-      zIndexRange={[2,4]}
+      zIndexRange={[2, 4]}
       className="w-full bg-opacity-0 text-lg text-white drop-shadow-lg">
       <input
         onClick={() => {

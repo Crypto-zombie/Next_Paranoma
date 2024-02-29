@@ -1,11 +1,13 @@
 'use client'
 import Paranoma from '@/components/Paranoma'
 import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
 export default function Scene() {
   return (
-    <Canvas>
+    <Canvas camera={{ fov: 80 }}>
       <Paranoma />
+      <OrbitControls />
     </Canvas>
   )
 }

@@ -25,8 +25,7 @@ const BlurDot = ({ pos, index }: Props) => {
         if (action === 'remove') {
           removeItem(index)
         }
-      }}
-    >
+      }}>
       <circleGeometry args={[15, 50]} />
       <meshPhysicalMaterial
         transmission={1}

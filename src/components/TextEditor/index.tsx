@@ -19,8 +19,7 @@ const TextEditor = ({ pos, index }: CustomText) => {
     <Html
       sprite
       position={pos}
-      className="w-full bg-opacity-0 text-lg text-white drop-shadow-lg"
-    >
+      className="w-full bg-opacity-0 text-lg text-white drop-shadow-lg">
       <input
         onClick={() => {
           if (action === 'remove') {

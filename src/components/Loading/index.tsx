@@ -34,12 +34,10 @@ export default function Loading() {
   return hide ? null : (
     <div
       ref={bg}
-      className="custom-background absolute left-0 top-0 z-[99999999] flex h-screen w-screen flex-col items-center justify-center"
-    >
+      className="custom-background absolute left-0 top-0 z-[99999999] flex h-screen w-screen flex-col items-center justify-center">
       <div
         ref={content}
-        className="flex flex-col items-center justify-center space-y-4 font-bold text-zinc-700"
-      >
+        className="flex flex-col items-center justify-center space-y-4 font-bold text-zinc-700">
         <div className="flex gap-2">
           <div className="flex flex-col items-center">
             <p className="items-end border-zinc-700 text-2xl tracking-wide">3D Paranoma Tools</p>

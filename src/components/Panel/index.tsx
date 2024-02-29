@@ -14,32 +14,28 @@ export default function Panel() {
         <div
           className="flex w-20 flex-col items-center justify-between space-y-2 p-1 hover:bg-zinc-700"
           style={{ backgroundColor: action === 'none' ? '#3F3E3E' : 'transparent' }}
-          onPointerDown={() => setAction('none')}
-        >
+          onPointerDown={() => setAction('none')}>
           <MdCamera className={'h-8 w-8 rounded-full border border-white p-1'} />
           <p className="text-xs">Control</p>
         </div>
         <div
           className="flex w-20 flex-col items-center justify-between space-y-2 p-1 hover:bg-zinc-700"
           style={{ backgroundColor: action === 'blur' ? '#3F3E3E' : 'transparent' }}
-          onPointerDown={() => setAction('blur')}
-        >
+          onPointerDown={() => setAction('blur')}>
           <MdBrokenImage className={'h-8 w-8 rounded-full border border-white p-1'} />
           <p className="text-xs">Blur Effect</p>
         </div>
         <div
           className="flex w-20 flex-col items-center justify-between space-y-2 p-1 hover:bg-zinc-700"
           style={{ backgroundColor: action === 'text' ? '#3F3E3E' : 'transparent' }}
-          onPointerDown={() => setAction('text')}
-        >
+          onPointerDown={() => setAction('text')}>
           <MdTextFields className={'h-8 w-8 rounded-full border border-white p-1'} />
           <p className="text-xs">Add Text</p>
         </div>
         <div
           className="flex w-20 flex-col items-center justify-between space-y-2 p-1 hover:bg-zinc-700"
           style={{ backgroundColor: action === 'remove' ? '#3F3E3E' : 'transparent' }}
-          onPointerDown={() => setAction('remove')}
-        >
+          onPointerDown={() => setAction('remove')}>
           <FiTrash className={'h-8 w-8 rounded-full border border-white p-1'} />
           <p className="text-xs">Remove Item</p>
         </div>

@@ -6,7 +6,10 @@ export default function Paranoma() {
 
   return (
     <group>
-      <mesh>
+      <mesh
+        onPointerDown={(e) => {
+          console.log(e.point.x, e.point.y, e.point.z)
+        }}>
         <sphereGeometry args={[150, 100, 100]} />
         <meshBasicMaterial
           map={texture}

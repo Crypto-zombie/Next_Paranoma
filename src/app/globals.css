@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.custom-background {
+  background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(175, 174, 174), rgb(85, 84, 84));
+}
+
+.imageDiv {
+  background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5438550420168067) 49%, rgba(255,255,255,0.25253851540616246) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.7) 100%);
+}

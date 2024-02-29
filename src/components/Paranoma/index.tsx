@@ -26,13 +26,10 @@ export default function Paranoma() {
       </mesh>
       <mesh
         onPointerDown={(e) => {
-          console.log('here')
           if (action === 'blur' && e.point.x) {
-            console.log(e.point.x)
             addBlurStack(new Vector3(e.point.x, e.point.y, e.point.z))
           }
           if (action === 'text' && e.point.x) {
-            console.log(e.point.x)
             addText(new Vector3(e.point.x, e.point.y, e.point.z))
             setAction('none')
           }

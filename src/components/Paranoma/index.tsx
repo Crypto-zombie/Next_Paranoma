@@ -8,6 +8,7 @@ export default function Paranoma() {
   const texture = useTexture('/paranoma.webp')
   const { action } = useAction()
   const { addBlurStack } = useBlurStack()
+  const { setAction } = useAction()
   const { addText } = useText()
   return (
     <group>
@@ -30,6 +31,7 @@ export default function Paranoma() {
           }
           if (action === 'text' && e.point.x) {
             addText(new Vector3(e.point.x, e.point.y, e.point.z))
+            setAction('none')
           }
         }}>
         <sphereGeometry args={[148, 100, 100]} />

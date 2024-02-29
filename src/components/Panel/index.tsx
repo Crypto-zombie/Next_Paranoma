@@ -1,4 +1,5 @@
 'use client'
+import { FiTrash } from '@react-icons/all-files/fi/FiTrash'
 import { MdBrokenImage } from '@react-icons/all-files/md/MdBrokenImage'
 import { MdCamera } from '@react-icons/all-files/md/MdCamera'
 import { MdTextFields } from '@react-icons/all-files/md/MdTextFields'
@@ -30,6 +31,13 @@ export default function Panel() {
           onPointerDown={() => setAction('text')}>
           <MdTextFields className={'h-8 w-8 rounded-full border border-white p-1'} />
           <p className="text-xs">Add Text</p>
+        </div>
+        <div
+          className="flex w-20 flex-col items-center justify-between space-y-2 p-1 hover:bg-zinc-700"
+          style={{ backgroundColor: action === 'remove' ? '#3F3E3E' : 'transparent' }}
+          onPointerDown={() => setAction('remove')}>
+          <FiTrash className={'h-8 w-8 rounded-full border border-white p-1'} />
+          <p className="text-xs">Remove Item</p>
         </div>
       </div>
     </div>

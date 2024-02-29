@@ -22,12 +22,14 @@ export default function Scene() {
           <BlurDot
             key={index}
             pos={pos}
+            index={index}
           />
         ))}
         {texts.map((pos, index) => (
           <TextEditor
             key={index}
             pos={pos}
+            index={index}
           />
         ))}
       </Canvas>

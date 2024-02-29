@@ -4,8 +4,9 @@ import { create } from 'zustand'
 
 export type initialState = {
   texts: Array<Vector3>
-  setTexts: (texts: any) => void
-  addText: (texts: any) => void
+  setTexts: (texts: Array<Vector3>) => void
+  addText: (item: Vector3) => void
+  removeItem: (index: number) => void
 }
 
 export const useText = create<initialState>((set) => ({
@@ -19,5 +20,10 @@ export const useText = create<initialState>((set) => ({
     set((state: any) => ({
       ...state,
       texts: [...state.texts, item]
+    })),
+  removeItem: (index: number) =>
+    set((state: any) => ({
+      ...state,
+      texts: state.texts.filter((_, inx: number) => index !== inx)
     }))
 }))

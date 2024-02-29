@@ -4,9 +4,10 @@ import { useLayoutEffect, useRef } from 'react'
 
 type Props = {
   pos: Vector3
+  index: number
 }
 const target = new Vector3(0, 0, 0)
-export default function BlurDot({ pos }: Props) {
+export default function BlurDot({ pos, index }: Props) {
   const ref = useRef<any>()
   useLayoutEffect(() => {
     ref.current.lookAt(target)

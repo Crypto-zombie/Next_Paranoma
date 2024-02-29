@@ -33,7 +33,8 @@ export default function Paranoma() {
             addText(new Vector3(e.point.x, e.point.y, e.point.z))
             setAction('none')
           }
-        }}>
+        }}
+      >
         <sphereGeometry args={[148, 100, 100]} />
         <meshBasicMaterial
           side={DoubleSide}

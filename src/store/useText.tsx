@@ -24,6 +24,6 @@ export const useText = create<initialState>((set) => ({
   removeItem: (index: number) =>
     set((state: any) => ({
       ...state,
-      texts: state.texts.filter((_, inx: number) => index !== inx)
+      texts: state.texts.filter((_: any, inx: number) => index !== inx)
     }))
 }))

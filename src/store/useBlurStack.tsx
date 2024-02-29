@@ -4,8 +4,9 @@ import { create } from 'zustand'
 
 export type initialState = {
   blurStack: Array<Vector3>
-  setBlurStack: (blurStack: any) => void
-  addBlurStack: (blurStack: any) => void
+  setBlurStack: (blurStack: Array<Vector3>) => void
+  addBlurStack: (item: Vector3) => void
+  removeItem: (index: number) => void
 }
 
 export const useBlurStack = create<initialState>((set) => ({
@@ -15,9 +16,14 @@ export const useBlurStack = create<initialState>((set) => ({
       ...state,
       blurStack: [...blurStack]
     })),
-  addBlurStack: (blurStack: Array<Vector3>) =>
+  addBlurStack: (item: Vector3) =>
     set((state: any) => ({
       ...state,
-      blurStack: [...state.blurStack, blurStack]
+      blurStack: [...state.blurStack, item]
+    })),
+  removeItem: (index: number) =>
+    set((state: any) => ({
+      ...state,
+      blurStack: state.blurStack.filter((_: any, inx: number) => index !== inx)
     }))
 }))

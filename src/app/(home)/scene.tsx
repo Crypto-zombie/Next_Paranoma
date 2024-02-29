@@ -15,8 +15,7 @@ export default function Scene() {
     <Suspense fallback={null}>
       <Canvas
         camera={{ fov: 80 }}
-        gl={{ antialias: true }}
-      >
+        gl={{ antialias: true }}>
         <Paranoma />
         <Preload all />
         {blurStack.map((pos, index) => (

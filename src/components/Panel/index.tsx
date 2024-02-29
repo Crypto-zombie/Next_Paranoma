@@ -8,7 +8,7 @@ import { useAction } from '@/store/useAction'
 export default function Panel() {
   const { action, setAction } = useAction()
   return (
-    <div className="absolute bottom-10 right-10 rounded-md bg-black bg-opacity-80 p-4 text-white">
+    <div className="absolute bottom-10 right-10 z-50 rounded-md bg-black bg-opacity-80 p-4 text-white">
       <p className="mb-4">Select tools</p>
       <div className="flex justify-between space-x-1">
         <div

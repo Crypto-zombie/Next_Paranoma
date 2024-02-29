@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Vector3 } from 'three'
+import { memo, useLayoutEffect, useRef } from 'react'
 import { useAction } from '@/store/useAction'
 import { useBlurStack } from '@/store/useBlurStack'
-import { useLayoutEffect, useRef } from 'react'
 
 type Props = {
   pos: Vector3
   index: number
 }
 const target = new Vector3(0, 0, 0)
-export default function BlurDot({ pos, index }: Props) {
+const BlurDot = ({ pos, index }: Props) => {
   const ref = useRef<any>()
   const { action } = useAction()
-  const { removeItem } = useBlurStack()
+  const { blurStack, removeItem } = useBlurStack()
   useLayoutEffect(() => {
     ref.current.lookAt(target)
-  }, [])
+  }, [blurStack])
   return (
     <mesh
       ref={ref}
@@ -34,3 +34,5 @@ export default function BlurDot({ pos, index }: Props) {
     </mesh>
   )
 }
+
+export default memo(BlurDot)

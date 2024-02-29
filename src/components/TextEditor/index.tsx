@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Html } from '@react-three/drei'
 import { Vector3 } from 'three'
+import { memo, useState } from 'react'
 import { useAction } from '@/store/useAction'
-import { useState } from 'react'
 import { useText } from '@/store/useText'
 type CustomText = {
   pos: Vector3
   index: number
 }
-export default function TextEditor({ pos, index }: CustomText) {
+const TextEditor = ({ pos, index }: CustomText) => {
   const [inputValue, setInputValue] = useState<string>('')
   const { action } = useAction()
   const { removeItem } = useText()
@@ -35,3 +35,5 @@ export default function TextEditor({ pos, index }: CustomText) {
     </Html>
   )
 }
+
+export default memo(TextEditor)

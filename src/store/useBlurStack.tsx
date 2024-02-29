@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Vector3 } from '@react-three/fiber'
+import { Vector3 } from 'three'
 import { create } from 'zustand'
 
 export type initialState = {

@@ -10,7 +10,9 @@ export default function Scene() {
   const { blurStack } = useBlurStack()
   return (
     <Suspense fallback={null}>
-      <Canvas camera={{ fov: 80 }}>
+      <Canvas
+        camera={{ fov: 80 }}
+        gl={{ antialias: true }}>
         <Paranoma />
         <Preload all />
         {blurStack.map((pos, index) => (

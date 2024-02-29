@@ -7,7 +7,7 @@ export type initialState = {
   setBlurStack: (blurStack: any) => void
 }
 
-export const useCart = create<initialState>((set) => ({
+export const useBlurStack = create<initialState>((set) => ({
   blurStack: [],
   setBlurStack: (blurStack: Array<Vector3>) =>
     set((state: any) => ({

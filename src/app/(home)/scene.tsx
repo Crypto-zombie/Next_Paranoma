@@ -7,7 +7,7 @@ export default function Scene() {
   return (
     <Canvas camera={{ fov: 80 }}>
       <Paranoma />
-      <OrbitControls />
+      <OrbitControls maxDistance={140} />
     </Canvas>
   )
 }

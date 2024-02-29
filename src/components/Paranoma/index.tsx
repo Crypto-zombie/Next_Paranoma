@@ -7,7 +7,7 @@ export default function Paranoma() {
   return (
     <group>
       <mesh>
-        <sphereGeometry args={[10, 100, 100]} />
+        <sphereGeometry args={[150, 100, 100]} />
         <meshBasicMaterial
           map={texture}
           side={DoubleSide}

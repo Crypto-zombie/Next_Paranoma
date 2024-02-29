@@ -11,6 +11,8 @@ import { useText } from '@/store/useText'
 export default function Scene() {
   const { blurStack } = useBlurStack()
   const { texts } = useText()
+  console.log('texts: ', texts)
+  console.log('blurStack: ', blurStack)
   return (
     <Suspense fallback={null}>
       <Canvas

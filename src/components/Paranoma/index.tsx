@@ -2,11 +2,13 @@ import { BackSide, DoubleSide, Vector3 } from 'three/src/Three.js'
 import { OrbitControls, useTexture } from '@react-three/drei'
 import { useAction } from '@/store/useAction'
 import { useBlurStack } from '@/store/useBlurStack'
+import { useText } from '@/store/useText'
 
 export default function Paranoma() {
   const texture = useTexture('/paranoma.webp')
   const { action } = useAction()
   const { addBlurStack } = useBlurStack()
+  const { addText } = useText()
   return (
     <group>
       <OrbitControls
@@ -23,8 +25,11 @@ export default function Paranoma() {
       </mesh>
       <mesh
         onPointerDown={(e) => {
-          if (action !== 'none' && e.point.x) {
+          if (action === 'blur' && e.point.x) {
             addBlurStack(new Vector3(e.point.x, e.point.y, e.point.z))
+          }
+          if (action === 'text' && e.point.x) {
+            addText(new Vector3(e.point.x, e.point.y, e.point.z))
           }
         }}>
         <sphereGeometry args={[148, 100, 100]} />
